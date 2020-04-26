@@ -54,4 +54,4 @@ combined <- rbind(test, train)
 # Group by subject and then activity
 grouped <- group_by(combined, subject, activity)
 summary <- summarize_all(grouped, mean)
-write.table(summary, "tidy_dataset.txt")
+write.table(summary, "tidy_dataset.txt", row.names = FALSE)
